@@ -1,5 +1,5 @@
-# covid-vaccination-alert
-Simple COVID vaccination alert.
+# COVID vaccination alert
+Simple COVID vaccination alert. Check if any slots available in your locality and get email notification right away.
 
 # Usage
 
