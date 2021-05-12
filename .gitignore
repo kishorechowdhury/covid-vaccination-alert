@@ -2,3 +2,4 @@ env
 .vscode
 script.bat
 send_email.cpython-38.pyc
+__pycache__
