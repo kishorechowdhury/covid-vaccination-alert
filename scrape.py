@@ -72,7 +72,7 @@ if __name__ == '__main__':
     pincodes = [700061, 700063, 700034] # use comma to separate pincodes
     PAYMENT_MODE = 'Free' # available values: Free, Paid
     AGE_LIMIT = 18 # available values: 18, 45
-    print('Execution starts')
+    print('Execution has started.')
     preprocess(pincodes, PAYMENT_MODE, AGE_LIMIT)
-    print('Execution finished.')
+    print('Execution has finished.')
     
