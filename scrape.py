@@ -38,9 +38,6 @@ def scrape(start_date, end_date, pincode):
         date_range = start_date + ' ~ ' + end_date
         for item in response['centers']:
             if item['fee_type'] == PAYMENT_MODE:
-                print(PAYMENT_MODE)
-                print(AGE_LIMIT)
-                print()
                 email_data  = f"{item['name'].upper()}\n"
                 email_data += f"Address: {item['address']} \n{item['district_name']}: {item['pincode']}\n"
                 email_data += f"Date: {date_range}"
