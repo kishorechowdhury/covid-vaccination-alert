@@ -6,9 +6,9 @@ Simple COVID vaccination alert. Check if any slots available in your locality an
 1. install python
 2. run pip install -r requirements.txt to install necessary packages.
 3. configure 'send_email.py'
-4. in the 'scrape.py' go to bottom and set the following params:
+4. at the top in 'scrape.py' and set the following params:
 
-   a. pincodes 
+   a. PINCODES 
    
    b. PAYMENT_MODE
    
