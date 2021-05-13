@@ -18,7 +18,7 @@ def fetch_data(params):
     return response
 
 
-def scrape(start_date, end_date, pincode, PAYMENT_MODE, AGE_LIMIT):
+def scrape(start_date, end_date, pincode):
     
     params = {
         'pincode': pincode,
@@ -38,6 +38,9 @@ def scrape(start_date, end_date, pincode, PAYMENT_MODE, AGE_LIMIT):
         date_range = start_date + ' ~ ' + end_date
         for item in response['centers']:
             if item['fee_type'] == PAYMENT_MODE:
+                print(PAYMENT_MODE)
+                print(AGE_LIMIT)
+                print()
                 email_data  = f"{item['name'].upper()}\n"
                 email_data += f"Address: {item['address']} \n{item['district_name']}: {item['pincode']}\n"
                 email_data += f"Date: {date_range}"
@@ -69,7 +72,7 @@ if __name__ == '__main__':
             start_dt = "%02d-%02d-%d" % (dt.day, dt.month, dt.year)
             end_dt = "%02d-%02d-%d" % (end_dt.day,end_dt.month,end_dt.year)
             
-            t = threading.Thread(target=scrape, args=[start_dt, end_dt, pincode, PAYMENT_MODE, AGE_LIMIT])
+            t = threading.Thread(target=scrape, args=[start_dt, end_dt, pincode])
             t.start()
             threads.append(t)
 
